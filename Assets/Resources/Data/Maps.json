@@ -1,0 +1,19 @@
+{
+    "data": [{
+            "path": "Maps/Map1",
+            "enemies": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "path": "Maps/Map1",
+            "enemies": [
+                1,
+                2,
+                3
+            ]
+        }
+    ]
+}
