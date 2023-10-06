@@ -46,6 +46,7 @@ public abstract class TankController : MoveController,IHit
     {
         BulletController bullet = Creater.Instance.CreateBullet(tranShoot);
         bullet.damage = damage;
+        Sound.Instance.PlaySound("laser_shot");
     }
 
     public void OnHit(float damage)
@@ -60,6 +61,7 @@ public abstract class TankController : MoveController,IHit
         TankInfo tankInfo = GetTankInfo(level);
         damage = tankInfo.damage;
         hpController.HP = tankInfo.hp;
+        Sound.Instance.PlaySound("power_up_sound");
     }
 
     protected abstract TankInfo GetTankInfo(int level);

@@ -7,6 +7,7 @@ public class MapController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Sound.Instance.PlayMusic("music_background");
         MapInfo mapInfo = DataManager.Instance.mapVO.GetMapInfo(GlobalVar.currentMapLevel);
         GameObject prefabMap = Resources.Load<GameObject>(mapInfo.path);
         Instantiate(prefabMap);
