@@ -10,7 +10,7 @@ public class TankInfo
     public int hp;
 }
 
-public abstract class TankController : MoveController,IHit
+public abstract class TankController : MoveController, IHit
 {
 
     public Transform gun;
@@ -42,7 +42,7 @@ public abstract class TankController : MoveController,IHit
         gun.up = direction;
     }
 
-    protected void Shoot()
+    protected virtual void Shoot()
     {
         BulletController bullet = Creater.Instance.CreateBullet(tranShoot);
         bullet.damage = damage;
